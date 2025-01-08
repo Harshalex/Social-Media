@@ -19,8 +19,8 @@ function Login() {
   return (
     <>
       <div className="flex justify-center items-center min-h-svh">
-        <div className="w-96 bg-slate-400 rounded-lg ">
-          <h1 className="text-3xl text-center py-3 font-bold text-slate-600">
+        <div className="w-1/4  rounded-lg  border-2 border-slate-500 p-5">
+          <h1 className="text-3xl text-center py-3 font-bold text-slate-600 pt-3">
             Login
           </h1>
           <form>
@@ -33,7 +33,7 @@ function Login() {
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="block py-2 px-4 mx-3 rounded-lg"
+              className="block py-2 px-3 rounded-lg  w-full border-2 border-slate-500"
               type="text"
               placeholder="Email"
             />
@@ -47,7 +47,7 @@ function Login() {
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="block py-2 px-4 mx-3 rounded-lg"
+              className="block w-full py-2 px-4  rounded-lg border-2 border-slate-500"
               type="password"
               placeholder="Password"
             />
@@ -59,6 +59,17 @@ function Login() {
                 Login
               </button>
             </div>
+            <p className="px-4 pb-4">
+              Do not have an account?{" "}
+              <span>
+                <button
+                  onClick={() => navigate("/signup")}
+                  className="text-blue-500 font-semibold"
+                >
+                  Sign up
+                </button>
+              </span>{" "}
+            </p>
           </form>
         </div>
       </div>
