@@ -23,6 +23,9 @@ cloudinary.config({
 
 app.use(morgan("common"));
 app.use("/", router);
+app.get("/", (req, res) => {
+  res.send("Our server is live!!");
+});
 app.get("/home", (req, res) => {
   res.send("We are on Home page");
 });
